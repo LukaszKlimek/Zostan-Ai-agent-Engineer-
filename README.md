@@ -11,11 +11,10 @@ Rynek AI zmienia się szybciej niż jakikolwiek inny obszar technologii. AI/Agen
 
 ---
 
-### Krok 0 — Przygotowanie *(w toku)*
+### [`Krok 0 — Przygotowanie (tutaj jestem)`](./roadmap/step%200%20-%20Przygotowanie)
 
 Solidne fundamenty zanim przejdziesz dalej: matematyka, Python, podstawy ML, SQL, Generative AI, narzędzia deweloperskie. Bez tego kolejne kroki nie mają sensu.
 
-📂 [`roadmap/step 0 - Przygotowanie`](./roadmap/step%200%20-%20Przygotowanie)
 
 ---
 
