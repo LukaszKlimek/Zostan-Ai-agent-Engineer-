@@ -7,7 +7,7 @@
 
 ## Dlaczego ten roadmap?
 
-Rynek AI zmienia się szybciej niż jakikolwiek inny obszar technologii. AI/Agent Engineer to rola, która dopiero krystalizuje się jako odrębny zawód — ktoś, kto nie tylko używa modeli językowych, ale **projektuje, buduje i wdraża autonomiczne systemy agentów AI**. Ten roadmap to moja osobista ścieżka, którą przechodzę krok po kroku.
+Rynek AI zmienia się szybciej niż jakikolwiek inny obszar technologii. AI/Agent Engineer to rola, która dopiero krystalizuje się jako odrębny zawód — ktoś, kto nie tylko używa modeli językowych, ale także projektuje, integruje i utrzymuje systemy z nimi powiązane. Ten roadmap ma pomóc uporządkować naukę i praktykę.
 
 ---
 
@@ -21,35 +21,52 @@ Solidne fundamenty zanim przejdziesz dalej: matematyka, Python, podstawy ML, SQL
 
 ### Krok 1 — Praca z LLM API i Prompt Engineering
 
-Nauka efektywnej komunikacji z modelami językowymi przez API (Anthropic, OpenAI). Zaawansowane techniki promptingu: chain-of-thought, few-shot, structured outputs. Zrozumienie jak modele "myślą" i jak wyciągać z nich powtarzalne wyniki.
+Nauka efektywnej komunikacji z modelami językowymi przez API (Anthropic, OpenAI). Zaawansowane techniki promptingu: chain-of-thought, few-shot, structured outputs. Zrozumienie jak modele "myślą" i jak przygotować dane wejściowe.
 
 ---
 
 ### Krok 2 — RAG (Retrieval-Augmented Generation)
 
-Budowanie systemów, które łączą wiedzę z zewnętrznych źródeł z możliwościami LLM. Embeddingi, wektorowe bazy danych, chunking, reranking. To fundament większości produkcyjnych aplikacji AI.
+Budowanie systemów, które łączą wiedzę z zewnętrznych źródeł z możliwościami LLM. Embeddingi, wektorowe bazy danych, chunking, reranking. To fundament większości produkcyjnych aplikacji wykorzystujących LLM.
 
 ---
 
-### Krok 3 — Budowanie Agentów AI
+### Krok 3 — Praca nad modelami (tworzenie, trenowanie, doskonalenie, ocena)
+
+Ten krok skupia się na zrozumieniu i praktycznej pracy z samymi modelami — zarówno budową od zera (np. modele specyficzne dla zadania), jak i doskonaleniem istniejących modeli (fine-tuning, LoRA), oraz ich ocenie i walidacji.
+
+Zakres przykładowych tematów:
+- Zbieranie i przygotowanie danych: anotacje, czyszczenie, augmentacja, podział na zbiory treningowe walidacyjne i testowe.
+- Metody trenowania i dostrajania: fine-tuning, few-shot, transfer learning, LoRA, parameter-efficient tuning.
+- Architektury i frameworki: Transformer, pytorch, TensorFlow, Hugging Face ecosystems.
+- Ewaluacja: metryki (accuracy, F1, BLEU, ROUGE, perplexity), walidacja krzyżowa, testy przeciwko błędom i przypadkom brzegowym.
+- Analiza i interpretowalność: SHAP, LIME, błędy klasyfikacji, analiza przyczynowa.
+- Bezpieczeństwo i bias: wykrywanie uprzedzeń, testy adversarialne, mitigacje.
+- Optymalizacja i deployment modelu: praca nad inference speed, quantization, pruning, a także monitorowanie wydajności po wdrożeniu.
+
+📂 [`roadmap/step 3 - Praca nad modelami`](./roadmap/step%203%20-%20Praca%20nad%20modelami)
+
+---
+
+### Krok 4 — Budowanie Agentów AI
 
 Projektowanie i implementacja autonomicznych agentów: pętle agentowe (ReAct, plan-and-execute), narzędzia (tools/functions), pamięć agenta, obsługa błędów i retry logic. Pierwszy kontakt z frameworkami agentowymi.
 
 ---
 
-### Krok 4 — Zaawansowane Systemy Multi-Agent
+### Krok 5 — Zaawansowane Systemy Multi-Agent
 
-Systemy złożone z wielu współpracujących agentów: orkiestracja, komunikacja między agentami, podział ról, human-in-the-loop. Frameworki: LangGraph, AutoGen, CrewAI. Ocena i ewaluacja agentów.
-
----
-
-### Krok 5 — Produkcja i MLOps dla Agentów
-
-Wdrażanie agentów na produkcję: konteneryzacja (Docker), API, monitoring, logowanie, obserwabilność (tracing LLM calls), cost management, bezpieczeństwo i guardrails. CI/CD dla systemów AI.
+Systemy złożone z wielu współpracujących agentów: orkiestracja, komunikacja między agentami, podział ról, human-in-the-loop. Frameworki: LangGraph, AutoGen, CrewAI. Ocena i ewaluacja agentów rozproszonych.
 
 ---
 
-### Krok 6 — Specjalizacja i Portfolio
+### Krok 6 — Produkcja i MLOps dla Agentów
+
+Wdrażanie agentów na produkcję: konteneryzacja (Docker), API, monitoring, logowanie, obserwowalność (tracing LLM calls), cost management, bezpieczeństwo i guardrails. CI/CD dla systemów AI.
+
+---
+
+### Krok 7 — Specjalizacja i Portfolio
 
 Wybór specjalizacji (np. agenty kodujące, agenty do analizy danych, agenty biznesowe), budowanie portfolio projektów, udział w open-source, dokumentowanie rozwiązań. Przygotowanie do rozmów kwalifikacyjnych.
 
@@ -62,10 +79,11 @@ Wybór specjalizacji (np. agenty kodujące, agenty do analizy danych, agenty biz
 | 0 | Przygotowanie | `W toku` |
 | 1 | LLM API i Prompt Engineering | `Nierozpoczęty` |
 | 2 | RAG | `Nierozpoczęty` |
-| 3 | Budowanie Agentów AI | `Nierozpoczęty` |
-| 4 | Zaawansowane Systemy Multi-Agent | `Nierozpoczęty` |
-| 5 | Produkcja i MLOps | `Nierozpoczęty` |
-| 6 | Specjalizacja i Portfolio | `Nierozpoczęty` |
+| 3 | Praca nad modelami (tworzenie, trenowanie, doskonalenie, ocena) | `Nierozpoczęty` |
+| 4 | Budowanie Agentów AI | `Nierozpoczęty` |
+| 5 | Zaawansowane Systemy Multi-Agent | `Nierozpoczęty` |
+| 6 | Produkcja i MLOps | `Nierozpoczęty` |
+| 7 | Specjalizacja i Portfolio | `Nierozpoczęty` |
 
 ---
 
@@ -75,4 +93,4 @@ Jeśli jesteś bardziej doświadczony i widzisz coś, co powinienem dodać, zmie
 
 ---
 
-*Ostatnia aktualizacja: luty 2026*
+*Ostatnia aktualizacja: 2026-02-20*
