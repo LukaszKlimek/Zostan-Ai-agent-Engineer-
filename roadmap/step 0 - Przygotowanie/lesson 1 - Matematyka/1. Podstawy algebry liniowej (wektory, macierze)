@@ -1,0 +1,230 @@
+# 📐 Podstawy Algebry Liniowej dla AI Engineering
+
+
+---
+
+## 🎯 Po co mi to w AI?
+
+Zanim zaczniemy - szybka motywacja:
+
+| Gdzie w AI? | Co tam robią wektory/macierze? |
+|-------------|-------------------------------|
+| Obrazy | Każdy piksel to liczba, obraz to macierz |
+| Tekst/NLP | Słowa zamieniane na wektory (embeddingi) |
+| Sieci neuronowe | Wagi sieci przechowywane w macierzach |
+| Dane tabelaryczne | Każdy wiersz danych to wektor |
+
+**Algebra liniowa = język, którym "mówi" AI**
+
+---
+
+## 1️⃣ WEKTORY
+
+### Czym jest wektor?
+
+Wektor to **uporządkowana lista liczb**. Tyle. Nic strasznego.
+
+```
+v = [3, 5, 2]
+```
+
+To jest wektor o 3 wymiarach (bo ma 3 liczby).
+
+### Intuicja wizualna
+
+```
+W 2D:                      W 3D wyobraź sobie strzałkę w przestrzeni
+    ↑ y                    
+    |    → v = [3, 2]      
+    |   /                  
+    |  /                   
+    | /                    
+    +--------→ x           
+```
+
+Wektor `[3, 2]` to strzałka wskazująca punkt (3, 2).
+
+### Praktyczny przykład w AI
+
+Wyobraź sobie, że opisujesz dom:
+```
+dom = [powierzchnia, liczba_pokoi, odległość_od_centrum]
+dom = [75, 3, 5.2]
+```
+
+Właśnie stworzyłeś **wektor cech** (feature vector) - fundament ML!
+
+---
+
+### Podstawowe operacje na wektorach
+
+#### ➕ Dodawanie wektorów
+```
+[1, 2, 3] + [4, 5, 6] = [5, 7, 9]
+```
+Po prostu dodajesz odpowiadające elementy.
+
+#### ✖️ Mnożenie przez skalar (liczbę)
+```
+2 × [1, 2, 3] = [2, 4, 6]
+```
+Mnożysz każdy element przez tę liczbę.
+
+#### 🎯 Iloczyn skalarny (dot product) - WAŻNE!
+```
+[1, 2, 3] · [4, 5, 6] = 1×4 + 2×5 + 3×6 = 4 + 10 + 18 = 32
+```
+
+**Dlaczego to ważne?** Iloczyn skalarny mierzy **podobieństwo** wektorów:
+- Duża wartość → wektory podobne (podobny kierunek)
+- Wartość bliska 0 → wektory prostopadłe (niezależne)
+- Wartość ujemna → wektory przeciwne
+
+> 💡 **W AI:** Tak właśnie sprawdzamy podobieństwo tekstów, obrazów, rekomendacji!
+
+---
+
+## 2️⃣ MACIERZE
+
+### Czym jest macierz?
+
+Macierz to **tabela liczb** (prostokąt wypełniony liczbami).
+
+```
+A = | 1  2  3 |
+    | 4  5  6 |
+```
+
+To jest macierz **2×3** (2 wiersze, 3 kolumny).
+
+### Praktyczny przykład
+
+```
+Zbiór danych z 3 domami:
+
+         powierzchnia  pokoje  odległość
+dom_1  |     75          3       5.2    |
+dom_2  |    120          5       2.1    |
+dom_3  |     50          2       8.0    |
+```
+
+Twój cały dataset to jedna macierz! Każdy wiersz = wektor jednej obserwacji.
+
+---
+
+### Podstawowe operacje na macierzach
+
+#### ➕ Dodawanie macierzy
+```
+| 1  2 |   | 5  6 |   | 6   8 |
+| 3  4 | + | 7  8 | = | 10  12|
+```
+Dodajesz odpowiadające elementy (macierze muszą mieć ten sam rozmiar).
+
+#### ✖️ Mnożenie przez skalar
+```
+    | 1  2 |   | 2  4 |
+2 × | 3  4 | = | 6  8 |
+```
+
+#### 🔥 Mnożenie macierzy - KLUCZOWE!
+
+Tu jest trick. Mnożenie macierzy NIE jest element po elemencie!
+
+```
+| 1  2 |   | 5  6 |   
+| 3  4 | × | 7  8 | = ?
+```
+
+**Zasada:** Wiersz × Kolumna → jeden element wyniku
+
+```
+Wynik[1,1] = [1,2] · [5,7] = 1×5 + 2×7 = 19
+Wynik[1,2] = [1,2] · [6,8] = 1×6 + 2×8 = 22
+Wynik[2,1] = [3,4] · [5,7] = 3×5 + 4×7 = 43
+Wynik[2,2] = [3,4] · [6,8] = 3×6 + 4×8 = 50
+
+Wynik = | 19  22 |
+        | 43  50 |
+```
+
+**Zasada wymiarów:**
+```
+(m × n) × (n × p) = (m × p)
+     ↑       ↑
+     Te muszą być równe!
+```
+
+> 💡 **W AI:** Mnożenie macierzy to serce sieci neuronowych. Każda warstwa sieci to mnożenie macierzy!
+
+---
+
+### Transpozycja macierzy
+
+Zamiana wierszy na kolumny:
+
+```
+A = | 1  2  3 |       A^T = | 1  4 |
+    | 4  5  6 |             | 2  5 |
+                            | 3  6 |
+```
+
+Macierz 2×3 → po transpozycji 3×2
+
+---
+
+## 3️⃣ Podsumowanie - Co zapamiętać?
+
+### 📌 Kluczowe pojęcia
+
+| Pojęcie | Co to? | Po co w AI? |
+|---------|--------|-------------|
+| **Wektor** | Lista liczb `[1, 2, 3]` | Reprezentacja danych (cechy) |
+| **Iloczyn skalarny** | Mnożenie wektorów → liczba | Mierzenie podobieństwa |
+| **Macierz** | Tabela liczb | Przechowywanie zbiorów danych, wag |
+| **Mnożenie macierzy** | Wiersz × kolumna | Obliczenia w sieciach neuronowych |
+| **Transpozycja** | Zamiana wierszy ↔ kolumn | Dopasowanie wymiarów |
+
+### 🧠 Intuicja na przyszłość
+
+```
+Dane wejściowe    Wagi sieci      Wynik
+   (wektor)    ×   (macierz)   =  (wektor)
+   
+   [x1, x2]    ×   | w1  w3 |   = [y1, y2]
+                   | w2  w4 |
+```
+
+To jest esencja tego, co robi sieć neuronowa!
+
+---
+
+## ✅ Sprawdź się
+
+Czy potrafisz odpowiedzieć:
+
+1. ✅ Czym jest wektor 5-wymiarowy?
+2. ✅ Ile wynosi `[1, 2] · [3, 4]`?
+3. ✅ Czy można pomnożyć macierz 3×2 przez macierz 4×3?
+4. ✅ Jaki wymiar ma wynik mnożenia macierzy 5×3 przez 3×7?
+
+<details>
+<summary>Odpowiedzi</summary>
+
+1. Lista 5 liczb, np. `[1, 2, 3, 4, 5]`
+2. `1×3 + 2×4 = 3 + 8 = 11`
+3. ❌ Nie! Wewnętrzne wymiary (2 i 4) się nie zgadzają
+4. 5×7
+
+</details>
+
+---
+
+## 🚀 Co dalej?
+
+Teraz gdy rozumiesz wektory i macierze, łatwiej Ci będzie zrozumieć:
+- Jak działają embeddingi (reprezentacje tekstów/obrazów)
+- Co dzieje się w warstwach sieci neuronowych
+- Dlaczego wymiary tensorów są tak ważne w TensorFlow/PyTorch
+
+**Powodzenia w kursie AI Engineering!** 🎓
