@@ -11,26 +11,33 @@ Rynek AI zmienia się szybciej niż jakikolwiek inny obszar technologii. AI/Agen
 
 ---
 
-### [`Krok 0 — Przygotowanie (tutaj jestem)`](./roadmap/step%200%20-%20Przygotowanie)
+## Roadmap
+
+<details>
+<summary><strong>🔄 Krok 0 — Przygotowanie (tutaj jestem)</strong></summary>
+
+[Link do pełnego kroku](./roadmap/step%200%20-%20Przygotowanie)
 
 Solidne fundamenty zanim przejdziesz dalej: matematyka, Python, podstawy ML, SQL, Generative AI, narzędzia deweloperskie. Bez tego kolejne kroki nie mają sensu.
 
+</details>
 
----
-
-### Krok 1 — Praca z LLM API i Prompt Engineering
+<details>
+<summary><strong>⏳ Krok 1 — Praca z LLM API i Prompt Engineering</strong></summary>
 
 Nauka efektywnej komunikacji z modelami językowymi przez API (Anthropic, OpenAI). Zaawansowane techniki promptingu: chain-of-thought, few-shot, structured outputs. Zrozumienie jak modele "myślą" i jak przygotować dane wejściowe.
 
----
+</details>
 
-### Krok 2 — RAG (Retrieval-Augmented Generation)
+<details>
+<summary><strong>⏳ Krok 2 — RAG (Retrieval-Augmented Generation)</strong></summary>
 
 Budowanie systemów, które łączą wiedzę z zewnętrznych źródeł z możliwościami LLM. Embeddingi, wektorowe bazy danych, chunking, reranking. To fundament większości produkcyjnych aplikacji wykorzystujących LLM.
 
----
+</details>
 
-### Krok 3 — Praca nad modelami (tworzenie, trenowanie, doskonalenie, ocena)
+<details>
+<summary><strong>⏳ Krok 3 — Praca nad modelami (tworzenie, trenowanie, doskonalenie, ocena)</strong></summary>
 
 Ten krok skupia się na zrozumieniu i praktycznej pracy z samymi modelami — zarówno budową od zera (np. modele specyficzne dla zadania), jak i doskonaleniem istniejących modeli (fine-tuning, LoRA), oraz ich ocenie i walidacji.
 
@@ -43,29 +50,35 @@ Zakres przykładowych tematów:
 - Bezpieczeństwo i bias: wykrywanie uprzedzeń, testy adversarialne, mitigacje.
 - Optymalizacja i deployment modelu: praca nad inference speed, quantization, pruning, a także monitorowanie wydajności po wdrożeniu.
 
----
+</details>
 
-### Krok 4 — Budowanie Agentów AI
+<details>
+<summary><strong>⏳ Krok 4 — Budowanie Agentów AI</strong></summary>
 
 Projektowanie i implementacja autonomicznych agentów: pętle agentowe (ReAct, plan-and-execute), narzędzia (tools/functions), pamięć agenta, obsługa błędów i retry logic. Pierwszy kontakt z frameworkami agentowymi.
 
----
+</details>
 
-### Krok 5 — Zaawansowane Systemy Multi-Agent
+<details>
+<summary><strong>⏳ Krok 5 — Zaawansowane Systemy Multi-Agent</strong></summary>
 
 Systemy złożone z wielu współpracujących agentów: orkiestracja, komunikacja między agentami, podział ról, human-in-the-loop. Frameworki: LangGraph, AutoGen, CrewAI. Ocena i ewaluacja agentów rozproszonych.
 
----
+</details>
 
-### Krok 6 — Produkcja i MLOps dla Agentów
+<details>
+<summary><strong>⏳ Krok 6 — Produkcja i MLOps dla Agentów</strong></summary>
 
 Wdrażanie agentów na produkcję: konteneryzacja (Docker), API, monitoring, logowanie, obserwowalność (tracing LLM calls), cost management, bezpieczeństwo i guardrails. CI/CD dla systemów AI.
 
----
+</details>
 
-### Krok 7 — Specjalizacja i Portfolio
+<details>
+<summary><strong>⏳ Krok 7 — Specjalizacja i Portfolio</strong></summary>
 
 Wybór specjalizacji (np. agenty kodujące, agenty do analizy danych, agenty biznesowe), budowanie portfolio projektów, udział w open-source, dokumentowanie rozwiązań. Przygotowanie do rozmów kwalifikacyjnych.
+
+</details>
 
 ---
 
