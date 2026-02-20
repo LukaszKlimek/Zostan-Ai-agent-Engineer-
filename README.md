@@ -11,14 +11,6 @@ Rynek AI zmienia się szybciej niż jakikolwiek inny obszar technologii. AI/Agen
 
 ---
 
-## Mapa drogi
-
-```
-[ KROK 0 ] ──> [ KROK 1 ] ──> [ KROK 2 ] ──> [ KROK 3 ] ──> [ KROK 4 ] ──> [ KROK 5 ] ──> [ KROK 6 ] ══> AI/Agent Engineer
-```
-
----
-
 ### Krok 0 — Przygotowanie *(w toku)*
 
 Solidne fundamenty zanim przejdziesz dalej: matematyka, Python, podstawy ML, SQL, Generative AI, narzędzia deweloperskie. Bez tego kolejne kroki nie mają sensu.
